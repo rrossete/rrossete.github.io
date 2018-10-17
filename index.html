@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Document</title>
+</head>
+<body>
+        <header class="site-header">
+                <div class="container">
+                    <div class="header-flex">
+        
+                        <!-- Logomarca Header -->
+                        <div class="header-logomarca">
+                            <h1><a href="/#">Meu website</a></h1>
+                            <p><a href="/#">CSS3 e HTML5 rules!</a></p>
+                        </div>
+                        <!-- /Logomarca Header -->
+        
+                        <!-- Botão abrir offcanvas -->
+                        <a class="offcanvas-button" href="#menu"></a>
+        
+                        <!-- Navegação Header -->
+                        <nav class="header-nav" id="menu">
+                            <!-- Botão fechar offcanvas -->
+                            <div class="offcanvas-close" onclick="history.back()"></div>
+        
+                            <a href="#introducao">Sobre</a>
+                            <a href="#funcionalidades">Funcionalidades</a>
+                            <a href="#tecnologias">Tecnologias</a>
+                            <a href="#contato">Contato</a>
+                        </nav>
+                        <!-- /Navegação Header -->
+        
+                    </div>
+                </div>
+            </header>
+   <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Olá Mundo</h2>
+                <p>Este é meu site feito com HTML5 e CSS3. Estas tecnologias possibilitam a WEB que temos hoje!</p>
+                <a href="#introducao">Conhecer Mais</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+        </section>
+
+        <section class="info-section" id="introducao">
+            <div class="container">
+                <div class="info-flex">
+                    
+                    <header>
+                            <h2>Roda em qualquer lugar!</h2>
+                            <p>
+                                Funciona em qualquer dispositivo atual, com alto desempenho e economia de dados, o que traz
+                                velocidade.
+                            </p>
+                            <p>
+                                Possibilita a criação de sites e aplicações Web de alto desempenho, juntamente com as
+                                tecnologias atuais.
+                            </p>
+                    </header>
+                    
+                    <video width="500" autoplay loop type="video/mp4" src="./assets/video-demo.mp4" ></video>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="cards-section" id="funcionalidades">
+            <div class="container">
+
+                <header>
+                        <h2>Porquê usar HTML5/CSS3?</h2>
+                        <p>Algumas informações sobre as tecnologias</p>
+                </header>
+
+                <div class="cards-grid">
+
+                    <article class="card">
+                            <h3>Desempenho</h3>
+                            <img src="./assets/icon-speed.png" alt="Desempenho">
+                            <p>
+                                CSS3 é rápido, pois consegue ser renderizado sem
+                                processamento de JavaScript e com uso mais eficiente
+                                do hardware como placa gráfica.
+                            </p>
+
+                    </article>
+
+                    <article class="card">
+                            <h3>Compatibilidade</h3>
+                            <img src="./assets/icon-web.png" alt="Compatibilidade">
+                            <p>
+                                A grande maioria das plataformas para acesso à internet
+                                dá suporte a CSS3 e a tendência é cada vez mais se tornar
+                                um padrão
+                            </p>
+                        </article>
+    
+                        <article class="card">
+                            <h3>Simplicidade</h3>
+                            <img src="./assets/icon-code.png" alt="Simplicidade">
+                            <p>
+                                HTML5 e CSS3 são simples de se entender e configurar.
+                                Com novas funcionalidades como Flex e Grid,
+                                se torna cada vez mais prático.
+                            </p>
+                        </article>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seção de Marcas -->
+        <section class="brands-section" id="tecnologias">
+                <div class="container">
+    
+                    <!-- Header Marcas -->
+                    <header>
+                        <h2>O que mais?</h2>
+                        <p>
+                            Algumas tecnologias populares no desenvolvimento em HTML5
+                            e seus respectivos links
+                        </p>
+                    </header>
+                    <!-- /Header Marcas -->
+    
+                    <!-- Grade Marcas -->
+                    <div class="brands-grid">
+    
+                        <!-- Marca -->
+                        <a title="HTML5" target="_blank" href="https://www.w3schools.com/html/html5_intro.asp" class="brand-card html5">
+                            <img src="./assets/icon-html5.png" alt="HTML5">
+                            <div class="brand-overlay">
+                                <h3>HTML5</h3>
+                                <p>Nova versão da linguagem HTML</p>
+                            </div>
+                        </a>
+                        <!-- /Marca -->
+    
+                        <a title="CSS3" target="_blank" href="https://www.w3schools.com/css/" class="brand-card css3">
+                            <img src="./assets/icon-css3.png" alt="CSS3">
+                            <div class="brand-overlay">
+                                <h3>CSS3</h3>
+                                <p>Define estilos para páginas web</p>
+                            </div>
+                        </a>
+    
+                        <a title="JavaScript" target="_blank" href="https://www.w3schools.com/js/" class="brand-card js">
+                            <img src="./assets/icon-js.png" alt="JavaScript">
+                            <div class="brand-overlay">
+                                <h3>JavaScript</h3>
+                                <p>Linguagem de programação</p>
+                            </div>
+                        </a>
+    
+                        <a title="Sass" target="_blank" href="https://sass-lang.com/" class="brand-card sass">
+                            <img src="./assets/icon-sass.png" alt="Sass">
+                            <div class="brand-overlay">
+                                <h3>Sass</h3>
+                                <p>Linguagem de extensão ao CSS</p>
+                            </div>
+                        </a>
+    
+                        <a title="Webflow" target="_blank" href="https://webflow.com/" class="brand-card webflow">
+                            <img src="./assets/icon-webflow.png" alt="Webflow">
+                            <div class="brand-overlay">
+                                <h3>WebFlow</h3>
+                                <p>Ferramenta de design web responsivo</p>
+                            </div>
+                        </a>
+    
+                        <a title="Angular" target="_blank" href="https://angularjs.org/" class="brand-card angular">
+                            <img src="./assets/icon-angular.png" alt="Angular">
+                            <div class="brand-overlay">
+                                <h3>Angular</h3>
+                                <p>Framework JavaScript MVW</p>
+                            </div>
+                        </a>
+    
+                        <a title="React" target="_blank" href="https://reactjs.org/" class="brand-card react">
+                            <img src="./assets/icon-react.png" alt="React">
+                            <div class="brand-overlay">
+                                <h3>React</h3>
+                                <p>Biblioteca JavaScript para criar interfaces de usuário</p>
+                            </div>
+                        </a>
+    
+                        <a title="Vue" target="_blank" href="https://vuejs.org/" class="brand-card vue">
+                            <img src="./assets/icon-vue.png" alt="Vue">
+                            <div class="brand-overlay">
+                                <h3>Vue</h3>
+                                <p>Framework JavaScript Progressiva</p>
+                            </div>
+                        </a>
+    
+                        <a title="WordPress" target="_blank" href="https://br.wordpress.org/" class="brand-card wordpress">
+                            <img src="./assets/icon-wordpress.png" alt="WordPress">
+                            <div class="brand-overlay">
+                                <h3>WordPress</h3>
+                                <p>Gerenciador de conteúdo</p>
+                            </div>
+                        </a>
+    
+                    </div>
+                    <!-- /Grade Marcas -->
+    
+                </div>
+            </section>
+            <!-- /Seção de Marcas -->
+
+   </main>
+
+    <!-- Footer do site -->
+    <footer class="site-footer">
+            <div class="container">
+                <div class="footer-flex">
+    
+                    <!-- Informações Footer -->
+                    <aside class="footer-info">
+                        <address>
+                            Campus Universitário - Rua José Lourenço Kelmer, <br />
+                            s/n - São Pedro, Juiz de Fora - MG, 36036-900<br />
+                            Tel: <a href="tel:(32) 2102-3911">(32) 2102-3911</a>
+                        </address>
+                    </aside>
+                    <!-- /Informações Footer -->
+    
+                    <!-- Navegação Social -->
+                    <nav class="social-nav">
+                        <a href="https://www.facebook.com/UFJFoficial/" title="facebook"></a>
+                        <a href="https://www.instagram.com/ufjf/?hl=pt-br" title="instagram"></a>
+                        <a href="https://twitter.com/ufjf_" title="twitter"></a>
+                        <a href="#" title="Link qualquer"></a>
+                    </nav>
+                    <!-- /Navegação Social -->
+    
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer do site -->
+
+         <!-- Sidebar/Modal do site -->
+    <aside class="modal" id="contato">
+
+            <!-- Elemento Fecha modal -->
+            <div class="modal-close" onclick="history.back()"></div>
+    
+            <!-- Conteúdo Modal -->
+            <div class="modal-content">
+                <h2>Entre em contato comigo!</h2>
+    
+                <!-- Formulário Modal -->
+                <form class="modal-form" method="POST" action="https://formspree.io/maxwellsouzacarvalho@gmail.com">
+                    <fieldset>
+    
+                        <!-- Grade Formulário -->
+                        <div class="form-grid">
+                            <label for="nome">
+                                <span>Nome</span>
+                                <input type="text" required id="nome" name="nome">
+                            </label>
+    
+                            <label for="email">
+                                <span>Email</span>
+                                <input type="email" required id="email" name="email">
+                            </label>
+    
+                            <label for="telefone">
+                                <span>Telefone</span>
+                                <input type="tel" placeholder="(XX) XXXXX-XXXX" id="telefone" name="telefone">
+                            </label>
+    
+                            <label for="mensagem">
+                                <span>Mensagem</span>
+                                <textarea required placeholder="Informe sua mensagem" name="mensagem" id="mensagem" cols="30"
+                                    rows="6"></textarea>
+                            </label>
+                            <button type="submit">Enviar</button>
+                        </div>
+                        <!-- /Grade Formulário -->
+    
+                    </fieldset>
+                </form>
+                <!-- /Formulário Modal -->
+    
+            </div>
+            <!-- /Conteúdo Modal -->
+    
+        </aside>
+        <!-- /Sidebar/Modal do site -->
+</body>
+</html>

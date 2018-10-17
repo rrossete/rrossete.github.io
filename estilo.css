@@ -1,0 +1,818 @@
+/* Parte 0: Padronização */
+
+/* 0.1: Importação Fontes */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Work+Sans');
+
+/* 0.2: Padronização página e elementos */
+html,
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+    /*scroll-behavior: smooth;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: inherit;
+}
+
+/* 0.3: Padronização Comportamento */
+* {
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+/* 0.4: Criação do Container do site e elementos reusáveis */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Parte 1: Header */
+
+/* 1.1: Header Geral */
+.site-header {
+    padding: 10px 0;
+    background-color:cadetblue;
+    color: #fff;
+}
+
+/* 1.2: Elementos gerais */
+.site-header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 1.3: Logomarca */
+.header-logomarca h1 {
+    color:cornsilk
+}
+
+.header-logomarca h1,
+.header-logomarca p {
+    margin: 0;
+}
+
+/* 1.4: Posicionamento (Flex) */
+.header-flex {
+    display: flex;
+
+    /* Posicionamento horizontal: Se afastar */
+    justify-content: space-between;
+
+    /* Posicionamento Vertical: Centralizado */
+    align-items: center;
+}
+
+/* 1.5: Navegação */
+.header-nav a {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 4px;
+
+}
+
+/* 1.5.1: Efeito Hover */
+.header-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Parte 2: Seção Hero */
+
+/* 2.1: Tamanho */
+.hero-section {
+    background-color: #01264c;
+
+    /* 2.1.0: Correção margin vazada e precaução tamanho do conteúdo */
+    padding: 20px 0;
+
+    /* 2.1.1: Altura geral e mínima */
+    height: 100vh;
+    min-height: 380px;
+
+    /* 2.1.2: Correção Altura tela */
+    height: calc(100vh - 79px);
+
+}
+
+/* 2.2: Fundo */
+.hero-section {
+    /* 2.2.1: Definição Background */
+    background-image: url('./assets/imagen-teste');
+    background-color: darkcyan;
+    background-size: cover;
+    background-position: center;
+    color:floralwhite;
+
+    /* 2.1.2: Background fixo */
+    background-attachment: fixed;
+}
+
+/* 2.3: Posicionamento */
+.hero-section {
+    /* 2.3.1: Flex */
+    display: flex;
+    /* Posicionamento vertical e horizontal: Centralizar */
+    align-items: center;
+    justify-content: center;
+
+    /* 2.3.2: Texto geral */
+    text-align: center;
+    font-size: 24px;
+
+    /* 2.3.3: Fonte responsiva */
+    font-size: 1.5em;
+}
+
+/* 2.4: Elementos gerais */
+.hero-section h2 {
+    font-size: 2em;
+    margin: 0 0 10px;
+    color:#01264c;
+}
+
+/* 2.5: Botões */
+.hero-section a {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 30px;
+
+    /* Evitar que elementos se toquem */
+    margin: 10px;
+
+    /* Herança */
+    color: inherit;
+}
+
+/* 2.5.1: Hover botão */
+.hero-section a:hover {
+    background: #fff;
+    color: #01264c;
+}
+
+
+/* Parte 3: Seção de introdução */
+
+/* 3.1: Definição da Seção geral */
+.info-section {
+    padding: 80px 0;
+    font-size: 1.2em;
+}
+
+/* 3.2: Posicionamento */
+.info-flex {
+    display: flex;
+    /* Alinhamento Vertical: Centro */
+    align-items: center;
+    /* Alinhamento Horizontal: Auto */
+}
+
+/* 3.3: Vídeo */
+.info-flex>video {
+
+    /* 3.3.1: Mudança da ordem */
+    order: -1;
+
+    /* 3.3.2: Espaçamento */
+    margin-right: 15px;
+}
+
+
+/* Parte 4: Seção de cards */
+
+/* 4.1: Definição geral */
+.cards-section {
+    padding: 40px 0;
+    background:  #01264c;
+    color: #fff;
+}
+
+/* 4.2: Estilizaçã Header */
+.cards-section header {
+    font-size: 1.2em;
+}
+
+/* 4.3: Definição Grid Cards */
+.cards-grid {
+    display: grid;
+
+    /* Espaçamento entre elementos */
+    grid-gap: 10px;
+
+    /* Definição do template das colunas */
+    grid-template-columns: 310px 310px 310px;
+
+    /* Redefinição do template com valores iguais */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* Redefinição do template com minmax */
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+
+    /* Redefinição do template de forma automática */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* 4.4: Estilo Card */
+.card {
+    background: #fff;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    margin: 5px;
+}
+
+/* 4.5: Estilo títulos Card */
+.card:nth-child(1) h3 {
+    color: #e2402d;
+}
+
+.card:nth-child(2) h3 {
+    color: #006df0;
+}
+
+.card:nth-child(3) h3 {
+    color: #93dd59;
+}
+
+/* Parte 5: Sessão de Marcas */
+
+/* 5.1: Sessão Geral */
+.brands-section {
+    padding: 40px 0;
+}
+
+/* 5.2: Grid de Cards */
+.brands-grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* 5.3: Estilo Card */
+.brand-card {
+    /* 5.3.1: Estilo Geral */
+    background-color: #e01931;
+    color: #fff;
+    padding: 50px;
+    text-decoration: none;
+
+    /* 5.3.2: Posicionamento Imagem Centralizado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 5.3.3: Posicionamento para overlay */
+    position: relative;
+    z-index: 0;
+    margin: -5px;
+}
+
+/* 5.4: Overlay do card */
+.brand-overlay {
+    /* 5.4.1: Estilo geral */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+
+    /* 5.4.2: Posicionamento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* 5.4.3: Posicionamento Conteúdo */
+    display: flex;
+    /* Muda comportamento do flex para colunas */
+    flex-direction: column;
+    /* Alinhamento central */
+    align-items: center;
+    justify-content: center;
+}
+
+/* 5.4.4: Elementos Internos */
+.brand-overlay h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* 5.5: Hover do Overlay */
+
+/* 5.5.1: Blur na imagem no hover */
+.brand-card:hover img {
+    filter: blur(5px);
+    transform: scale(1.2);
+}
+
+/* 5.5.2: Opacidade do overlay */
+.brand-overlay {
+    opacity: 0;
+}
+
+.brand-card:hover .brand-overlay {
+    opacity: 1;
+}
+
+/* 5.6: Cores dos cards */
+.brand-card.html5 {
+    background-color: #ef4730;
+}
+
+.brand-card.css3 {
+    background-color: #2196f3;
+}
+
+.brand-card.js {
+    background-color: #f7e02d;
+}
+
+.brand-card.sass {
+    background-color: #c66395;
+}
+
+.brand-card.webflow {
+    background-color: #4b68fc;
+}
+
+
+.brand-card.angular {
+    background-color: #d83d2a;
+    padding: 30px;
+}
+
+.brand-card.react {
+    background-color: #5ed3f3;
+}
+
+.brand-card.vue {
+    background-color: #357e57;
+}
+
+.brand-card.wordpress {
+    background-color: #319bcb;
+  
+}
+
+/* 6: Rodapé */
+
+/* 6.1: Estilo Geral */
+.site-footer {
+    background-color:#01264c;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* 6.2: Conteúdo geral */
+.site-footer a {
+    color: #f4e832;
+}
+
+/* 6.3: Posicionamento */
+.footer-flex {
+    display: flex;
+
+    /* Centralização Vertical */
+    align-items: center;
+
+    /* Espaçamento Horizontal */
+    justify-content: space-between;
+}
+
+/* 6.4: Navegação Social */
+.social-nav a {
+    /* 6.4.1: Estilo geral */
+    background-color: #333;
+    text-decoration: none;
+
+    /* 6.4.2: Forma */
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    /* 6.4.3: Background */
+    background-image: url('./assets/icon-link.png');
+    background-size: 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: 1px solid white;    
+}
+
+/* 6.5: Estilização baseado em atributo */
+.social-nav a[href*="facebook"] {
+    background-color: #4064ac;
+    background-image: url('./assets/icon-facebook.png');
+    border: 1px solid white;
+}
+
+.social-nav a[href*="twitter"] {
+    background-color: #219beb;
+    background-image: url('./assets/icon-twitter.png');
+    border: 1px solid white;
+}
+
+.social-nav a[href*="instagram"] {
+    background-color: #5852c3;
+    background-image: url('./assets/icon-instagram.png');
+    border: 1px solid white;
+}
+
+/* 7: Janela Contato */
+
+/* 7.1: Container da janela */
+.modal {
+    /* 7.1.1: Estilo geral */
+    background: rgba(0, 0, 0, 0.7);
+
+    /* 7.1.2: Posicionamento */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* camada z-index: Acima de todas */
+    z-index: 3;
+
+    /* 7.1.3: Posicionamento Conteúdo */
+    display: flex;
+    /* Centralização Geral */
+    align-items: center;
+    justify-content: center;
+
+    /* Scroll automático */
+    overflow: auto;
+}
+
+/* 7.2: Janela */
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 30px;
+    margin: 20px;
+    max-width: 940px;
+    width: 100%;
+}
+
+/* 7.3: Elemento  que fecha janela */
+.modal-close {
+    /* Posicionado cobrindo todo o modal, mas com z-index negativo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+
+    /* Mostra cursor de click */
+    cursor: pointer;
+}
+
+/* 7.4: Efeito abrir/fechar modal */
+.modal {
+    /* Cliques no elemento são ignorados */
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+
+/* Target: Quando o ID do elemento é o ativo */
+.modal:target {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+/* Parte 8: Formulário */
+
+/* 8.1: Elementos Gerais */
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* 8.2: Estilização Inputs */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+
+    /* Remove opção de mudança de tamanho */
+    resize: none;
+}
+
+/* 8.2.1: Estilização Estados input */
+input:focus,
+textarea:focus,
+button:focus {
+    transform: scale(1.02);
+}
+
+input:valid,
+textarea:valid {
+    background-color: #f0ffef;
+}
+
+/* 8.3 Estilização Botão */
+button {
+    /* 8.3.1: Estilo geral */
+    background-color: #01264c;
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.4em;
+    border: 2px solid #fff;
+    text-decoration: none;
+
+    /* 8.3.2: Forma */
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* 8.3.3: Hover */
+button:hover {
+    background-color: #4064ac;
+}
+
+/* 8.4: Label do formulário */
+.modal-form label>span {
+    font-weight: bold;
+}
+
+/* 8.5: Grid do formulário */
+.form-grid {
+    display: flex;
+
+    /* Alinhamento Horizontal: Espaçamento entre */
+    justify-content: space-between;
+
+    /* Faz com que elementos que não mais caibam na linha irem para próxima */
+    flex-wrap: wrap;
+}
+
+/* 8.5.1: Regra pra elementos gerais da grid */
+.form-grid>* {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 8.5.2: Regra pra 2o e 3o elemento */
+.form-grid>*:nth-child(2),
+.form-grid>*:nth-child(3) {
+    /* Metade da largura */
+    width: 50%;
+
+    /* Metade da largura menos 10px para dar espaçamento */
+    width: calc(50% - 10px);
+}
+
+/* Parte 9: responsivo */
+
+/* 9.0: Esconder elementos responsivos */
+.offcanvas-button,
+.offcanvas-close {
+    display: none;
+}
+
+/* 9.1: Breakpoint Tablet */
+@media(max-width: 768px) {
+
+    /* 9.2: Regras gerais */
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    /* 9.3: Botão menu lateral */
+    .offcanvas-button {
+        /* 9.3.1: Reaparecer elemento */
+        display: block;
+
+        /* 9.3.2: Imagem de fundo */
+        background-image: url('./assets/icon-menu.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 50%;
+
+        /* 9.3.3: Forma */
+        width: 48px;
+        height: 48px;
+
+        border-radius: 2px;
+    }
+    .offcanvas-button:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 30%;
+    }
+
+    /* 9.4: Transformar navegação em menu lateral */
+    .header-nav {
+        background-color: cadetblue;
+
+        /* 9.4.1: Posicionamento fixo na lateral */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        /* 9.4.2: Tamanho geral e máximo */ 
+        width: 320px;
+        max-width: 100vw;
+
+        /* 9.4.3: Estado inicial escondido */
+        transform: translateX(-100%);
+    }
+
+    /* 9.4.4: Elemento ativo */
+    .header-nav:target {
+        transform: translateX(0%);
+        transition: all 200ms ease-out;
+    }
+
+    /* 9.4.5: Comportamento elementos */
+    .header-nav>a {
+        display: block;
+        padding: 15px 10px;
+    
+    }
+
+    /* 9.4.6: Botão de fechar */
+    .offcanvas-close {
+        /* Reaparecer */
+        display: block;
+
+        /* Formato */
+        width: 48px;
+        height: 48px;
+
+        /* Fundo */
+        background-image: url('./assets/icon-close.png');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    /* 9.4.7: Comportamento para primeiro link */
+    .header-nav>a:first-of-type {
+        border-top: 1px solid #fff;
+        margin-top: 10px;
+    }
+
+    /* 9.5: Correções gerais */
+
+    /* 9.5.1: Correção altura hero novo tamanho header */
+    .hero-section {
+        height: calc(100vh - 71px);
+    }
+
+    /* 9.5.2: Correção video info: Quebrar grid */
+    .info-flex {
+        flex-wrap: wrap;
+    }
+
+    /* 9.5.3: Posicionamento vídeo */
+    .info-flex>video {
+        width: 100%;
+        order: 0;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    /* 9.5.4: Correção cards Marcas */
+    .brands-grid {
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .brand-card {
+        padding: 20px;
+    }
+}
+
+/* 9.6: Breakpoint mobile - Correções gerais */
+@media(max-width: 425px) {
+
+    /* 9.6.1: Tamanho cards */
+    .brands-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+
+    .brand-card {
+        padding: 10px;
+    }
+
+    /* 9.6.2: Corrigir grid Footer */
+    .footer-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-info {
+        width: 100;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Parte 10: Melhorias CSS */
+
+/* 10.1: Header fixo */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* 10.2: Transições suaves */
+.header-nav a {
+    transition: background-color 200ms;
+}
+
+.hero-section a {
+    transition: all 200ms ease-out;
+}
+
+.brand-card img,
+.brand-overlay {
+    transition: all 400ms ease-out;
+}
+
+.header-nav {
+    transition: all 200ms ease-out;
+}
+
+input,
+textarea,
+button {
+    transition: all 200ms ease-out;
+}
+
+.modal-content,
+.modal {
+    transition: all 200ms ease-out;
+}
+
+/* 10.3: Animação janela  */
+.modal>.modal-content {
+    /* Animação da janela subindo */
+    transform: translateY(30%);
+}
+
+.modal:target>.modal-content {
+    transform: translateY(0%);
+
+}
+
+/* 10.4: Animação Título Hero */
+
+/* 10.4.1: Definição de frames para animação de pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* 10.4.2: Uso da animação */
+
+
+/* 10.4.3: Animação BG */
+@keyframes moving-bg {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+
